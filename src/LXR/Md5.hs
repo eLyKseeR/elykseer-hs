@@ -14,7 +14,7 @@ import Foreign.Ptr
 import Foreign.ForeignPtr
 
 -- binding the external code
-foreign import ccall unsafe md5_buffer :: CString -> CInt -> IO (Ptr LXR.Key128.Key128Raw)
+foreign import ccall unsafe md5_buffer :: CString -> CInt -> IO (Ptr LXR.Key128.Key128Cpp)
 
 -- implementation
 hash_string :: String -> IO LXR.Key128.Key128

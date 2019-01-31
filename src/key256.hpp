@@ -7,11 +7,11 @@
 extern "C" {
 #endif
 
-MT_API HsPtr key256_random();
-MT_API HsPtr key256_fromhex(char const *);
-MT_API void key256_release(HsPtr ptr);
-MT_API int key256_length(HsPtr ptr);
-MT_API char const * key256_tohex(HsPtr ptr);
+HS_API HsPtr key256_random();
+HS_API HsPtr key256_fromhex(char const *);
+HS_API void key256_release(HsPtr ptr);
+HS_API int key256_length(HsPtr ptr);
+HS_API char const * key256_tohex(HsPtr ptr);
 
 #ifdef __cplusplus
 }

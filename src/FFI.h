@@ -2,13 +2,13 @@
 #define FFI_H
 
 #ifdef _WINDOWS
-#ifdef __MT_DLL_EXPORT
-#define MT_API __declspec(dllexport)
+#ifdef __HS_DLL_EXPORT
+#define HS_API __declspec(dllexport)
 #else
-#define MT_API
+#define HS_API
 #endif
 #else
-#define MT_API extern
+#define HS_API extern
 #endif
 
 /*
@@ -36,7 +36,7 @@ typedef void *HsStablePtr;
 #define HS_BOOL_TRUE 1
 
 #define FF_PTR2TYPE(fn, cl, tfn, tp, def) \
-MT_API tp fn(HsPtr extptr) \
+HS_API tp fn(HsPtr extptr) \
 { \
 	cl* c = (cl*)extptr; \
 	if (c) { \
@@ -46,7 +46,7 @@ MT_API tp fn(HsPtr extptr) \
 } \
 
 /*#define FF_PTR1ARG2TYPE(fn, arg1, cl, tfn, tp, def) \
-MT_API tp fn(HsPtr extptr, arg1) \
+HS_API tp fn(HsPtr extptr, arg1) \
 { \
 	cl* c = (cl*)extptr; \
 	if (c) { \
@@ -61,7 +61,7 @@ MT_API tp fn(HsPtr extptr, arg1) \
  *  to be released by the receiver
  */
 #define FF_PTR2STR(fn, cl, tfn) \
-MT_API const char * fn(HsPtr extptr) \
+HS_API const char * fn(HsPtr extptr) \
 { \
 	cl* c = (cl*)extptr; \
 	if (c) { \

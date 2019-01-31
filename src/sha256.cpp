@@ -16,14 +16,14 @@
   extern "C" {
 #endif
 
-MT_API HsPtr sha256_buffer(char const *s, int l)
+HS_API HsPtr sha256_buffer(char const *s, int l)
 {
   lxr::Key256 k = lxr::Sha256::hash(s,l);
   lxr::Key256 *c = new lxr::Key256(k);
   return (void*)c;
 }
 
-MT_API HsPtr sha256_file(char const *s)
+HS_API HsPtr sha256_file(char const *s)
 {
   boost::filesystem::path fp(s);
   lxr::Key256 k = lxr::Sha256::hash(fp);

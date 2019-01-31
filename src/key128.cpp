@@ -15,7 +15,7 @@
   extern "C" {
 #endif
 
-MT_API void key128_release(HsPtr hsptr)
+HS_API void key128_release(HsPtr hsptr)
 {
 	lxr::Key128* c = (lxr::Key128*)hsptr;
 	if (c) {
@@ -25,20 +25,20 @@ MT_API void key128_release(HsPtr hsptr)
 
 FF_PTR2INT(key128_length, lxr::Key128, length)
 
-MT_API HsPtr key128_random()
+HS_API HsPtr key128_random()
 {
 	lxr::Key128* c = new lxr::Key128();
 	return (void*)c;
 }
 
-MT_API HsPtr key128_fromhex(const char *k)
+HS_API HsPtr key128_fromhex(const char *k, int l)
 {
 	lxr::Key128* c = new lxr::Key128();
   c->fromBytes((unsigned char const*)k);
 	return (void*)c;
 }
 
-MT_API char const* key128_tohex(HsPtr hsptr)
+HS_API char const* key128_tohex(HsPtr hsptr)
 {
 	lxr::Key128* c = (lxr::Key128*)hsptr;
 	if (c) {

@@ -13,8 +13,6 @@ module LXR.Liz
 
 import Foreign.C.Types
 import Foreign.C.String
--- import Foreign.Ptr
--- import Foreign.ForeignPtr
 
 -- binding the external code
 foreign import ccall unsafe liz_verify :: IO CBool

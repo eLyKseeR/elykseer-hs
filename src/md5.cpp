@@ -16,7 +16,7 @@
   extern "C" {
 #endif
 
-MT_API HsPtr md5_buffer(char const *s, int l)
+HS_API HsPtr md5_buffer(char const *s, int l)
 {
   lxr::Key128 k = lxr::Md5::hash(s,l);
   lxr::Key128 *c = new lxr::Key128(k);

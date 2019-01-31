@@ -13,35 +13,35 @@
   extern "C" {
 #endif
 
-MT_API char liz_verify()
+HS_API char liz_verify()
 {
   return lxr::Liz::verify();
 }
 
-MT_API int liz_daysleft()
+HS_API int liz_daysleft()
 {
   return lxr::Liz::daysLeft();
 }
 
-MT_API char const * liz_name()
+HS_API char const * liz_name()
 {
   std::string s = lxr::Liz::name();
   return strdup(s.c_str());
 }
 
-MT_API char const * liz_version()
+HS_API char const * liz_version()
 {
   std::string s = lxr::Liz::version();
   return strdup(s.c_str());
 }
 
-MT_API char const * liz_copyright()
+HS_API char const * liz_copyright()
 {
   std::string s = lxr::Liz::copyright();
   return strdup(s.c_str());
 }
 
-MT_API char const * liz_license()
+HS_API char const * liz_license()
 {
   std::string s = lxr::Liz::license();
   return strdup(s.c_str());

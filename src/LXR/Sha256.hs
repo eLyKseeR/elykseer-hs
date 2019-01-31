@@ -15,8 +15,8 @@ import Foreign.Ptr
 import Foreign.ForeignPtr
 
 -- binding the external code
-foreign import ccall unsafe sha256_buffer :: CString -> CInt -> IO (Ptr LXR.Key256.Key256Raw)
-foreign import ccall unsafe sha256_file :: CString -> IO (Ptr LXR.Key256.Key256Raw)
+foreign import ccall unsafe sha256_buffer :: CString -> CInt -> IO (Ptr LXR.Key256.Key256Cpp)
+foreign import ccall unsafe sha256_file :: CString -> IO (Ptr LXR.Key256.Key256Cpp)
 
 -- implementation
 hash_string :: String -> IO LXR.Key256.Key256

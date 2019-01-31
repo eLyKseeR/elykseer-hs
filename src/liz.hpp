@@ -7,13 +7,13 @@
 extern "C" {
 #endif
 
-MT_API char liz_verify();
-MT_API int liz_daysleft();
+HS_API char liz_verify();
+HS_API int liz_daysleft();
 
-MT_API char const * liz_name();
-MT_API char const * liz_version();
-MT_API char const * liz_license();
-MT_API char const * liz_copyright();
+HS_API char const * liz_name();
+HS_API char const * liz_version();
+HS_API char const * liz_license();
+HS_API char const * liz_copyright();
 
 #ifdef __cplusplus
 }

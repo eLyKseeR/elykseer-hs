@@ -8,7 +8,7 @@ ELSE()
 	SET(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose the type of build, options are: None(CMAKE_CXX_FLAGS or CMAKE_C_FLAGS used) Debug Release DebugProfile RelWithDebInfo MinSizeRel.")
 ENDIF()
 
-add_definitions( -D__MT_DLL_EXPORT )
+add_definitions( -D__HS_DLL_EXPORT )
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -O1 -fPIC")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99 -g -fPIC")
@@ -34,8 +34,11 @@ INCLUDE_DIRECTORIES (${Boost_INCLUDE_DIRS})
 include_directories(".")
 # lxr
 include_directories("../ext/elykseer-cpp/cpp/src/")
+# ext
+include_directories("../ext/elykseer-cpp/ext/pugixml/src/")
 
 # link external libraries
+link_directories("${CMAKE_HOME_DIRECTORY}/ext/elykseer-cpp/ext/pugixml")
 link_directories("${CMAKE_HOME_DIRECTORY}/ext/")
 IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
    # Mac OS X specific code

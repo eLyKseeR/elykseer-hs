@@ -7,7 +7,7 @@
 extern "C" {
 #endif
 
-MT_API HsPtr md5_buffer(char const *, int);
+HS_API HsPtr md5_buffer(char const *, int);
 
 #ifdef __cplusplus
 }

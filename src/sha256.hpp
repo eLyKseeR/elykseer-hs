@@ -7,8 +7,8 @@
 extern "C" {
 #endif
 
-MT_API HsPtr sha256_buffer(char const *, int);
-MT_API HsPtr sha256_file(char const *);
+HS_API HsPtr sha256_buffer(char const *, int);
+HS_API HsPtr sha256_file(char const *);
 
 #ifdef __cplusplus
 }
