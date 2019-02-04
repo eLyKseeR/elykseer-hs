@@ -73,9 +73,7 @@ instance Db DbFp String DbFpDat where
   type DbInstance DbFp String DbFpDat = Ptr (DbFpCpp String DbFpDat)
   set db k v = return ()
   get db k = empty_DbFpDat
-  count db = do
-      i <- dbfp_count db
-      return $ fromIntegral i
+  count db = fromIntegral <$> dbfp_count db
 
 
 data DbFpCpp k v
@@ -93,3 +91,5 @@ foreign import ccall
     dbfp_release :: FunPtr (Ptr (DbFpCpp k v) -> IO ())
 
 -- implementation
+count :: DbFp -> IO Int
+count p = withForeignPtr (ptr p) $ \d -> fromIntegral <$> dbfp_count d
