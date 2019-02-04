@@ -10,7 +10,7 @@ ENDIF()
 
 add_definitions( -D__HS_DLL_EXPORT )
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -O1 -fPIC")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z -g -O1 -fPIC")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99 -g -fPIC")
 set(CMAKE_LD_FLAGS "${CMAKE_LD_FLAGS} -fPIC")
 
