@@ -8,6 +8,7 @@
 #include "key128.hpp"
 #include "lxr/key128.hpp"
 
+#include <cstring>
 #include <string>
 
 // our functions need to be C-functions

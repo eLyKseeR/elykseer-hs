@@ -1,5 +1,5 @@
 name:                elykseer-hs
-version:             0.1.0.0
+version:             1.0.2.1
 -- synopsis:
 -- description:
 homepage:            https://www.elykseer.com
@@ -29,8 +29,14 @@ library
                      , aeson
   hs-source-dirs:      src
   default-language:    Haskell2010
+  extra-libraries:     elykseer-hs_Debug_s
+                     , elykseer-cpp_Debug_s
+                     , prngCpp_s.linux.1.0.4
+                     , cryptopp
+                     , stdc++
   ghc-options:         -Wall -O2
                        -fno-ignore-asserts
+                       -pgmlg++
 
 executable elykseer-hs
   main-is:             Main.lhs
@@ -38,6 +44,7 @@ executable elykseer-hs
   -- other-extensions:
   default-extensions:  OverloadedStrings
   build-depends:       base >= 4 && < 5
+                     , elykseer-hs
   hs-source-dirs:      app
   default-language:    Haskell2010
   ghc-options:         -Wall -threaded -O2

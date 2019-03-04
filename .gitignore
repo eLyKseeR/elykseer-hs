@@ -1,0 +1,10 @@
+BUILD/
+cabal.project.local
+dist-newstyle/
+ext/
+
+.DS_Store
+._.DS_Store
+.ghc.environment.*
+
+	

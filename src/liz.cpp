@@ -8,6 +8,9 @@
 #include "liz.hpp"
 #include "lxr/liz.hpp"
 
+#include <cstring>
+#include <string>
+
 // our functions need to be C-functions
 #ifdef __cplusplus
   extern "C" {

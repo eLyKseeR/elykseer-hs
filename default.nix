@@ -8,6 +8,7 @@ stdenv.mkDerivation rec {
     # Customizable development requirements
     nativeBuildInputs = [
         cmake
+        gcc
         git
         pandoc
         html2text
@@ -16,6 +17,8 @@ stdenv.mkDerivation rec {
     buildInputs = [
         zlib
         boost
+        gmp
+        numactl
     ];
 
 }
